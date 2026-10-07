@@ -1,0 +1,1362 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Axon AI Support | Copyright & Nutzung</title>
+
+  <meta
+    name="description"
+    content="Offizielle Copyright- und Nutzungsinformationen von Axon AI Support."
+  >
+
+  <style>
+    /* =========================================================
+       AXON AI SUPPORT
+       Copyright © 2026 Axon AI Support
+       ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: #f7f8ff;
+      background: #05060b;
+      overflow-x: hidden;
+    }
+
+    /* =========================================================
+       BACKGROUND
+       ========================================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(111, 88, 255, 0.23),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(30, 132, 255, 0.17),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 50% 100%,
+          rgba(100, 50, 255, 0.12),
+          transparent 35%
+        );
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+
+      opacity: 0.18;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 48px 48px;
+    }
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+
+      width: 3px;
+      height: 3px;
+
+      border-radius: 50%;
+
+      background: rgba(128, 145, 255, 0.65);
+
+      box-shadow:
+        0 0 12px rgba(105, 125, 255, 0.8);
+
+      animation: particleFloat linear infinite;
+    }
+
+    @keyframes particleFloat {
+      from {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      85% {
+        opacity: 1;
+      }
+
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .navbar {
+      position: fixed;
+
+      top: 17px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: min(1150px, calc(100% - 30px));
+
+      padding: 12px 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 18px;
+
+      background: rgba(7, 9, 17, 0.72);
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      box-shadow:
+        0 20px 70px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      font-weight: 850;
+      letter-spacing: -0.4px;
+    }
+
+    .brand-logo {
+      width: 39px;
+      height: 39px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7662ff,
+          #258cff
+        );
+
+      box-shadow:
+        0 0 30px rgba(98, 93, 255, 0.38);
+
+      font-weight: 950;
+    }
+
+    .brand-name {
+      font-size: 15px;
+    }
+
+    .brand-name span {
+      display: block;
+
+      margin-top: -2px;
+
+      color: #747d93;
+
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-links a {
+      color: #aeb6ca;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 650;
+
+      padding: 9px 12px;
+
+      border-radius: 10px;
+
+      transition:
+        color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        150px 20px
+        100px;
+
+      text-align: center;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 950px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 14px;
+
+      border: 1px solid rgba(121, 102, 255, 0.28);
+      border-radius: 999px;
+
+      background: rgba(111, 91, 255, 0.08);
+
+      color: #c0b9ff;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      margin-bottom: 27px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #8171ff;
+
+      box-shadow:
+        0 0 14px #8171ff;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 9vw, 108px);
+
+      line-height: 0.91;
+
+      letter-spacing: -7px;
+
+      font-weight: 950;
+
+      margin-bottom: 31px;
+
+      background:
+        linear-gradient(
+          120deg,
+          #ffffff 0%,
+          #ffffff 30%,
+          #afa4ff 62%,
+          #66a4ff 100%
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+
+      filter:
+        drop-shadow(
+          0 0 45px rgba(105, 91, 255, 0.13)
+        );
+    }
+
+    .hero-description {
+      max-width: 720px;
+
+      margin: auto;
+
+      color: #9ca5b9;
+
+      font-size: 18px;
+
+      line-height: 1.75;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding: 0 19px;
+
+      border-radius: 13px;
+
+      color: #fff;
+
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+      background: rgba(255,255,255,0.05);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      border-color: transparent;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7460ff,
+          #338aff
+        );
+
+      box-shadow:
+        0 14px 38px rgba(76, 82, 255, 0.28);
+    }
+
+    /* =========================================================
+       GENERAL SECTIONS
+       ========================================================= */
+
+    .section {
+      width: min(1100px, calc(100% - 30px));
+
+      margin: auto;
+
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: #8173ff;
+
+      font-size: 12px;
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 8px;
+
+      font-size: clamp(33px, 5vw, 52px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+    }
+
+    .section-description {
+      max-width: 720px;
+
+      margin-top: 14px;
+
+      color: #8993a8;
+
+      font-size: 15px;
+
+      line-height: 1.75;
+    }
+
+    /* =========================================================
+       WARNING
+       ========================================================= */
+
+    .warning {
+      margin-top: 32px;
+
+      padding: 26px;
+
+      border:
+        1px solid
+        rgba(255, 91, 112, 0.25);
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 70, 95, 0.08),
+          rgba(255,255,255,0.025)
+        );
+    }
+
+    .warning-title {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      color: #ff8798;
+
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .warning-icon {
+      width: 30px;
+      height: 30px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 9px;
+
+      background: rgba(255, 70, 95, 0.11);
+    }
+
+    .warning p {
+      margin-top: 10px;
+
+      color: #abb3c3;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       CARDS
+       ========================================================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
+
+      margin-top: 32px;
+    }
+
+    .card {
+      min-height: 220px;
+
+      padding: 27px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.075);
+
+      border-radius: 21px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.018)
+        );
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(118, 101, 255, 0.32);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(118, 101, 255, 0.085),
+          rgba(255,255,255,0.018)
+        );
+    }
+
+    .card-icon {
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 13px;
+
+      background:
+        rgba(111, 91, 255, 0.12);
+
+      border:
+        1px solid
+        rgba(118, 101, 255, 0.17);
+
+      margin-bottom: 19px;
+
+      font-size: 18px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #8993a8;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       PROHIBITED
+       ========================================================= */
+
+    .prohibited-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px;
+
+      margin-top: 32px;
+    }
+
+    .prohibited-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 12px;
+
+      padding: 18px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.065);
+
+      border-radius: 15px;
+
+      background:
+        rgba(255,255,255,0.025);
+    }
+
+    .cross {
+      width: 27px;
+      height: 27px;
+
+      min-width: 27px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      color: #ff8194;
+
+      background:
+        rgba(255, 70, 95, 0.10);
+
+      font-weight: 950;
+    }
+
+    .prohibited-item p {
+      color: #a3abbc;
+
+      font-size: 14px;
+
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       LICENSE
+       ========================================================= */
+
+    .license-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 48px 35px;
+
+      text-align: center;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.09);
+
+      border-radius: 25px;
+
+      background:
+        radial-gradient(
+          circle at 80% 0%,
+          rgba(80, 110, 255, 0.18),
+          transparent 33%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .license-box h2 {
+      font-size: 35px;
+
+      letter-spacing: -1.5px;
+    }
+
+    .license-box p {
+      max-width: 760px;
+
+      margin:
+        13px auto 0;
+
+      color: #9099ad;
+
+      font-size: 15px;
+
+      line-height: 1.75;
+    }
+
+    .license-tag {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 9px 15px;
+
+      border-radius: 999px;
+
+      color: #b9b0ff;
+
+      background:
+        rgba(110, 90, 255, 0.10);
+
+      border:
+        1px solid
+        rgba(110, 90, 255, 0.20);
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.6px;
+    }
+
+    /* =========================================================
+       LEGAL NOTE
+       ========================================================= */
+
+    .legal-note {
+      margin-top: 25px;
+
+      padding: 20px;
+
+      border-radius: 16px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.07);
+
+      background:
+        rgba(255,255,255,0.025);
+
+      color: #7f899d;
+
+      font-size: 12px;
+
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      width: min(1100px, calc(100% - 30px));
+
+      margin: 30px auto 0;
+
+      padding:
+        35px 0
+        45px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+
+      color: #717b90;
+
+      font-size: 12px;
+    }
+
+    footer strong {
+      display: block;
+
+      color: #cdd2df;
+
+      font-size: 14px;
+
+      margin-bottom: 3px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .prohibited-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .license-box {
+        padding: 35px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       PARTICLES
+       ======================================================= -->
+
+  <div id="particles"></div>
+
+  <!-- =======================================================
+       NAVIGATION
+       ======================================================= -->
+
+  <nav class="navbar">
+
+    <div class="brand">
+
+      <div class="brand-logo">
+        A
+      </div>
+
+      <div class="brand-name">
+        Axon AI Support
+        <span>Official Information</span>
+      </div>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="#copyright">
+        Copyright
+      </a>
+
+      <a href="#nutzung">
+        Nutzung
+      </a>
+
+      <a href="#lizenz">
+        Lizenz
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Offizielle Copyright-Seite
+      </div>
+
+      <h1>
+        AXON AI<br>
+        SUPPORT
+      </h1>
+
+      <p class="hero-description">
+        Informationen zu Eigentum, Copyright und zulässiger
+        Nutzung des Axon AI Support Bots und seiner Bestandteile.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="button button-primary"
+          href="#copyright"
+        >
+          Copyright ansehen
+        </a>
+
+        <a
+          class="button"
+          href="#nutzung"
+        >
+          Nutzungsbedingungen
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =======================================================
+       COPYRIGHT
+       ======================================================= -->
+
+  <section
+    class="section"
+    id="copyright"
+  >
+
+    <div>
+
+      <div class="section-label">
+        01 · Eigentum
+      </div>
+
+      <h2 class="section-title">
+        Copyright & Eigentumsrechte
+      </h2>
+
+      <p class="section-description">
+        Diese Seite informiert über die vorgesehenen
+        Nutzungsbedingungen des Axon AI Support Bots.
+      </p>
+
+    </div>
+
+    <div class="warning">
+
+      <div class="warning-title">
+
+        <div class="warning-icon">
+          !
+        </div>
+
+        Wichtiger Hinweis
+
+      </div>
+
+      <p>
+        Der Axon AI Support Bot, sein Quellcode, seine
+        Konfigurationen, Texte, Designs, Funktionen und
+        nicht öffentlich bereitgestellten Bestandteile
+        sind – soweit nicht ausdrücklich anders angegeben –
+        Eigentum von Axon AI Support.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="card-icon">
+          ©
+        </div>
+
+        <h3>
+          Eigentum
+        </h3>
+
+        <p>
+          Der Bot und seine Bestandteile dürfen nicht als
+          eigenes Werk ausgegeben oder unter einem anderen
+          Namen veröffentlicht werden.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-icon">
+          🔒
+        </div>
+
+        <h3>
+          Geschützte Bestandteile
+        </h3>
+
+        <p>
+          Quellcode, interne Dateien, Konfigurationen und
+          nicht öffentlich bereitgestellte Systeme dürfen
+          nicht ohne Genehmigung weitergegeben werden.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-icon">
+          ✓
+        </div>
+
+        <h3>
+          Vorgesehene Nutzung
+        </h3>
+
+        <p>
+          Die Nutzung erfolgt ausschließlich innerhalb
+          des von Axon AI Support vorgesehenen Rahmens.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- =======================================================
+       VERBOTENE NUTZUNG
+       ======================================================= -->
+
+  <section
+    class="section"
+    id="nutzung"
+  >
+
+    <div>
+
+      <div class="section-label">
+        02 · Einschränkungen
+      </div>
+
+      <h2 class="section-title">
+        Was ist nicht erlaubt?
+      </h2>
+
+      <p class="section-description">
+        Ohne ausdrückliche Genehmigung von Axon AI Support
+        ist insbesondere Folgendes nicht gestattet:
+      </p>
+
+    </div>
+
+    <div class="prohibited-list">
+
+      <div class="prohibited-item">
+
+        <div class="cross">
+          ×
+        </div>
+
+        <p>
+          Den Bot eigenständig auf einem eigenen Discord-
+          Server zu hosten oder zu betreiben.
+        </p>
+
+      </div>
+
+      <div class="prohibited-item">
+
+        <div class="cross">
+          ×
+        </div>
+
+        <p>
+          Den Bot oder seinen Quellcode zu kopieren,
+          zu veröffentlichen oder weiterzugeben.
+        </p>
+
+      </div>
+
+      <div class="prohibited-item">
+
+        <div class="cross">
+          ×
+        </div>
+
+        <p>
+          Bestandteile des Bots für mehrere eigene
+          Projekte oder andere Zwecke einzusetzen.
+        </p>
+
+      </div>
+
+      <div class="prohibited-item">
+
+        <div class="cross">
+          ×
+        </div>
+
+        <p>
+          Copyright-, Lizenz- oder Eigentumshinweise
+          zu entfernen oder zu verändern.
+        </p>
+
+      </div>
+
+      <div class="prohibited-item">
+
+        <div class="cross">
+          ×
+        </div>
+
+        <p>
+          Den Bot oder seine Bestandteile zu verkaufen,
+          zu vermieten oder weiterzuverkaufen.
+        </p>
+
+      </div>
+
+      <div class="prohibited-item">
+
+        <div class="cross">
+          ×
+        </div>
+
+        <p>
+          Eine im Wesentlichen identische Version ohne
+          entsprechende Berechtigung zu erstellen.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =======================================================
+       DURCHSETZUNG
+       ======================================================= -->
+
+  <section class="section">
+
+    <div>
+
+      <div class="section-label">
+        03 · Schutz
+      </div>
+
+      <h2 class="section-title">
+        Schutz des Projekts
+      </h2>
+
+      <p class="section-description">
+        Axon AI Support behält sich vor, bei Verstößen gegen
+        diese Nutzungsbedingungen die betreffende Nutzung
+        zu untersagen und weitere geeignete Maßnahmen zu
+        prüfen. Maßgeblich sind die jeweils geltenden
+        gesetzlichen Bestimmungen.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="card-icon">
+          🛡
+        </div>
+
+        <h3>
+          Schutz
+        </h3>
+
+        <p>
+          Die Rechte an eigenen Inhalten und am eigenen
+          Programm sollen vor unerlaubter Nutzung geschützt
+          werden.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-icon">
+          ⚙
+        </div>
+
+        <h3>
+          Berechtigung
+        </h3>
+
+        <p>
+          Eine abweichende Nutzung kann nur erfolgen, wenn
+          Axon AI Support dafür ausdrücklich eine
+          entsprechende Erlaubnis erteilt.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-icon">
+          !
+        </div>
+
+        <h3>
+          Verstöße
+        </h3>
+
+        <p>
+          Bei einem Verstoß können geeignete rechtliche
+          und technische Maßnahmen geprüft werden.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- =======================================================
+       LIZENZ
+       ======================================================= -->
+
+  <section
+    class="section"
+    id="lizenz"
+  >
+
+    <div class="license-box">
+
+      <h2>
+        Keine automatische Lizenz
+      </h2>
+
+      <p>
+        Die Bereitstellung oder Nutzung des Axon AI Support
+        Bots bedeutet keine Übertragung des Eigentums.
+        Weitergehende Nutzungsrechte werden nur eingeräumt,
+        wenn Axon AI Support diese ausdrücklich gewährt.
+      </p>
+
+      <div class="license-tag">
+        © 2026 AXON AI SUPPORT · ALLE RECHTE VORBEHALTEN
+      </div>
+
+    </div>
+
+    <div class="legal-note">
+
+      <strong>Rechtlicher Hinweis:</strong>
+
+      Diese Website stellt allgemeine Informationen zu
+      Copyright und Nutzung dar und ersetzt keine
+      individuelle Rechtsberatung. Für eine rechtlich
+      verbindliche Lizenzvereinbarung oder eine konkrete
+      rechtliche Durchsetzung sollte eine qualifizierte
+      Rechtsberatung eingeholt werden.
+
+    </div>
+
+  </section>
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <div>
+
+      <strong>
+        Axon AI Support
+      </strong>
+
+      Offizielle Copyright- & Nutzungsinformationen
+
+    </div>
+
+    <div>
+
+      © 2026 Axon AI Support
+
+      <br>
+
+      Alle Rechte vorbehalten.
+
+    </div>
+
+  </footer>
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    /*
+      Axon AI Support
+      Animated background particles
+    */
+
+    const particleContainer =
+      document.getElementById("particles");
+
+    const particleCount = 45;
+
+    for (
+      let i = 0;
+      i < particleCount;
+      i++
+    ) {
+
+      const particle =
+        document.createElement("div");
+
+      particle.className =
+        "particle";
+
+      particle.style.left =
+        Math.random() * 100 + "%";
+
+      particle.style.animationDuration =
+        (7 + Math.random() * 12) + "s";
+
+      particle.style.animationDelay =
+        (-Math.random() * 15) + "s";
+
+      particle.style.opacity =
+        0.25 + Math.random() * 0.7;
+
+      particleContainer.appendChild(
+        particle
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
